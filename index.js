@@ -6,8 +6,8 @@ const consumer = new Kafka.KafkaConsumer(
         'bootstrap.servers': process.env.BOOTSTRAP_SERVERS,
         'sasl.username': process.env.API_KEY,
         'sasl.password': process.env.API_SECRET,
-        'security.protocol': process.env.SECURITY_PROTOCOL,
-        'sasl.mechanisms': process.env.SASL_MECHANISM,
+        'security.protocol': "SASL_SSL",
+        'sasl.mechanisms': "PLAIN",
         'group.id': 'nodejs-consumers'
     }, 
     {
