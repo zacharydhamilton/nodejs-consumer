@@ -17,7 +17,7 @@ const consumer = new Kafka.KafkaConsumer(
 
 consumer.connect();
 consumer.on('ready', () => {
-    consumer.subscribe(['stocks']);
+    consumer.subscribe(['users']);
     consumer.consume();
 })
 
